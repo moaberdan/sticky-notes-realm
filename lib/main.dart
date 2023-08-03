@@ -7,7 +7,7 @@ import 'sticky_note.dart';
 import 'use-cases/list_sticky_note_use_case.dart';
 
 void main() async {
-  final app = App(AppConfiguration(""));
+  final app = App(AppConfiguration("colocar-chave-device-sync"));
   final user = await app.logIn(Credentials.anonymous());
   final realm =
       Realm(Configuration.flexibleSync(user, [StickyNoteModel.schema]));
